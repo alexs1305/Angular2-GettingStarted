@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { ProductService } from './products/product.service';
+import { PersonService } from './people/person.service';
 
 @Component({
     selector: 'pm-app',
@@ -13,7 +11,7 @@ import { ProductService } from './products/product.service';
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['/welcome']">Home</a></li>
-                    <li><a [routerLink]="['/products']">Product List</a></li>
+                    <li><a [routerLink]="['/people']">Product List</a></li>
                 </ul>
             </div>
         </nav>
@@ -21,12 +19,9 @@ import { ProductService } from './products/product.service';
             <router-outlet></router-outlet>
         </div>
      </div>
-     `,
-    directives: [ROUTER_DIRECTIVES],
-    providers: [ProductService,
-                HTTP_PROVIDERS]
+     `
 })
 
 export class AppComponent {
-    pageTitle: string = 'Acme Product Management';
+    pageTitle: string = 'People';
 }
