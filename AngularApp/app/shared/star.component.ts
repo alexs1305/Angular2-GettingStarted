@@ -13,7 +13,7 @@ export class StarComponent implements OnChanges {
         new EventEmitter<string>();
 
     ngOnChanges(): void {
-        // Convert x out of 5 starts
+        // Convert x out of 5 stars
         // to y out of 86px width
         this.starWidth = this.rating * 86 / 5;
     }
